@@ -41,4 +41,26 @@ class UserServiceImpl implements UserService, UserProvider {
         return userRepository.findAll();
     }
 
+    @Override
+    public Optional<User> getUserDetailsById(Long id) {
+        if (id == null || id < 1) {
+            log.error("Invalid id");
+            throw new IllegalArgumentException("Invalid id");
+        }
+
+        log.info("Getting details for user's id: {}", id);
+
+        return userRepository.findById(id);
+    }
+
+    @Override
+    public Optional<User> getUserDetailsByEmail(String email) {
+        if (null == email || email.isBlank()) {
+            log.error("Invalid email");
+            throw new IllegalArgumentException("Invalid email");
+        }
+        log.info("Getting details for user's email: {}", email);
+
+        return userRepository.findByEmail(email);
+    }
 }
