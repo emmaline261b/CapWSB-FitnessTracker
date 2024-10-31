@@ -60,5 +60,9 @@ class UserController {
                 .orElse(Collections.emptyList());
     }
 
-
+    @DeleteMapping(value = "{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public User deleteUser(@PathVariable Long id) {
+        return userService.deleteUserById(id);
+    }
 }
