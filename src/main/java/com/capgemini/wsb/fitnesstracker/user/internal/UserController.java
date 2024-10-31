@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/v1/users")
@@ -64,5 +65,13 @@ class UserController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public User deleteUser(@PathVariable Long id) {
         return userService.deleteUserById(id);
+    }
+
+    @GetMapping(value = "/partial-email")
+    public List<UserDto> getUserDetailsByPartialEmail(@RequestParam String partialEmail) {
+        return userService.findMatchingUsersByPartialEmail(partialEmail)
+                .stream()
+                .map(userMapper::toDto)
+                .collect(Collectors.toList());
     }
 }
