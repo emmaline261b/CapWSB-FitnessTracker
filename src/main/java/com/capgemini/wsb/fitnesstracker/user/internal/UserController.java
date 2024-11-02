@@ -63,7 +63,7 @@ class UserController {
                 .orElse(Collections.emptyList());
     }
 
-    @DeleteMapping(value = "{id}")
+    @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public User deleteUser(@PathVariable Long id) {
         return userService.deleteUserById(id);
@@ -92,7 +92,7 @@ class UserController {
                 .collect(Collectors.toList());
     }
 
-    @PutMapping(value = "{id}")
+    @PutMapping(value = "/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
         return userService.updateUser(id, userMapper.toEntity(userDto));
     }
