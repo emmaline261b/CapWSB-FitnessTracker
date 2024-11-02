@@ -1,0 +1,142 @@
+[
+  {
+    "user": {
+      "id": 1,
+      "firstName": "Emma",
+      "lastName": "Johnson",
+      "birthdate": "1996-10-31",
+      "email": "Emma.Johnson@domain.com"
+    },
+    "startTime": "2024-01-19T07:00:00.000+00:00",
+    "endTime": "2024-01-19T08:30:00.000+00:00",
+    "activityType": "RUNNING",
+    "distance": 0.0,
+    "averageSpeed": 8.2
+  },
+  {
+    "user": {
+      "id": 2,
+      "firstName": "Ethan",
+      "lastName": "Taylor",
+      "birthdate": "1973-10-31",
+      "email": "Ethan.Taylor@domain.com"
+    },
+    "startTime": "2024-01-18T14:30:00.000+00:00",
+    "endTime": "2024-01-18T16:00:00.000+00:00",
+    "activityType": "CYCLING",
+    "distance": 0.0,
+    "averageSpeed": 18.5
+  },
+  {
+    "user": {
+      "id": 3,
+      "firstName": "Olivia",
+      "lastName": "Davis",
+      "birthdate": "1948-10-31",
+      "email": "Olivia.Davis@domain.com"
+    },
+    "startTime": "2024-01-17T06:45:00.000+00:00",
+    "endTime": "2024-01-17T08:00:00.000+00:00",
+    "activityType": "WALKING",
+    "distance": 0.0,
+    "averageSpeed": 5.8
+  },
+  {
+    "user": {
+      "id": 4,
+      "firstName": "Daniel",
+      "lastName": "Thomas",
+      "birthdate": "1990-10-31",
+      "email": "Daniel.Thomas@domain.com"
+    },
+    "startTime": "2024-01-16T17:00:00.000+00:00",
+    "endTime": "2024-01-16T18:30:00.000+00:00",
+    "activityType": "RUNNING",
+    "distance": 0.0,
+    "averageSpeed": 9.0
+  },
+  {
+    "user": {
+      "id": 5,
+      "firstName": "Sophia",
+      "lastName": "Baker",
+      "birthdate": "1975-10-31",
+      "email": "Sophia.Baker@domain.com"
+    },
+    "startTime": "2024-01-15T11:30:00.000+00:00",
+    "endTime": "2024-01-15T12:45:00.000+00:00",
+    "activityType": "CYCLING",
+    "distance": 0.0,
+    "averageSpeed": 15.3
+  },
+  {
+    "user": {
+      "id": 6,
+      "firstName": "Liam",
+      "lastName": "Jones",
+      "birthdate": "2001-10-31",
+      "email": "Liam.Jones@domain.com"
+    },
+    "startTime": "2024-01-14T08:00:00.000+00:00",
+    "endTime": "2024-01-14T09:15:00.000+00:00",
+    "activityType": "WALKING",
+    "distance": 0.0,
+    "averageSpeed": 4.0
+  },
+  {
+    "user": {
+      "id": 7,
+      "firstName": "Ava",
+      "lastName": "Williams",
+      "birthdate": "2003-10-31",
+      "email": "Ava.Williams@domain.com"
+    },
+    "startTime": "2024-01-13T15:45:00.000+00:00",
+    "endTime": "2024-01-13T17:30:00.000+00:00",
+    "activityType": "RUNNING",
+    "distance": 0.0,
+    "averageSpeed": 10.8
+  },
+  {
+    "user": {
+      "id": 8,
+      "firstName": "Noah",
+      "lastName": "Miller",
+      "birthdate": "1985-10-31",
+      "email": "Noah.Miller@domain.com"
+    },
+    "startTime": "2024-01-12T10:30:00.000+00:00",
+    "endTime": "2024-01-12T11:45:00.000+00:00",
+    "activityType": "CYCLING",
+    "distance": 0.0,
+    "averageSpeed": 17.2
+  },
+  {
+    "user": {
+      "id": 9,
+      "firstName": "Grace",
+      "lastName": "Anderson",
+      "birthdate": "1991-10-31",
+      "email": "Grace.Anderson@domain.com"
+    },
+    "startTime": "2024-01-11T06:15:00.000+00:00",
+    "endTime": "2024-01-11T07:30:00.000+00:00",
+    "activityType": "WALKING",
+    "distance": 0.0,
+    "averageSpeed": 4.5
+  },
+  {
+    "user": {
+      "id": 10,
+      "firstName": "Oliver",
+      "lastName": "Swift",
+      "birthdate": "1995-10-31",
+      "email": "Oliver.Swift@domain.com"
+    },
+    "startTime": "2024-01-10T13:00:00.000+00:00",
+    "endTime": "2024-01-10T14:15:00.000+00:00",
+    "activityType": "RUNNING",
+    "distance": 0.0,
+    "averageSpeed": 8.5
+  }
+]
