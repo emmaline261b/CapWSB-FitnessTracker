@@ -190,7 +190,7 @@ class UserApiIntegrationTest extends IntegrationTestBase {
                 USER_BIRTHDATE,
                 USER_EMAIL);
 
-        mockMvc.perform(put("/v1/users/{userId}", user1.getId())
+        mockMvc.perform(patch("/v1/users/{userId}", user1.getId())
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updateRequest));
 

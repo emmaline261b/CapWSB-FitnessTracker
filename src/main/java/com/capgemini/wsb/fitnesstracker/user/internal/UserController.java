@@ -91,7 +91,7 @@ class UserController {
                 .collect(Collectors.toList());
     }
 
-    @PutMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PatchMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public User updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
         return userService.updateUser(id, userMapper.toEntity(userDto));
     }
