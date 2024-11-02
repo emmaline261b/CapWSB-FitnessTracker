@@ -157,7 +157,7 @@ class UserServiceImpl implements UserService, UserProvider {
      * @throws IllegalArgumentException if the partial email is invalid
      */
     @Override
-    public List<User> findMatchingUsersByPartialEmail(String partialEmail) {
+    public List<User> findMatchingUsersByPartialEmail(String partialEmail) throws IllegalArgumentException {
         validatePartialEmail(partialEmail);
         log.info("Getting matching users by email fragment: {}", partialEmail);
 
@@ -211,7 +211,6 @@ class UserServiceImpl implements UserService, UserProvider {
 
         return userRepository.save(existingUser);
     }
-
 
 //==================== util methods ====================
 
