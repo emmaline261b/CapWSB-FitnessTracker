@@ -77,4 +77,11 @@ class UserServiceImpl implements UserService, UserProvider {
         userRepository.delete(users.get(0));
         return users.get(0);
     }
+    @Override
+    public List<User> findMatchingUsersByPartialEmail(String partialEmail) {
+        log.info("Getting matching users by email fragment: {}", partialEmail);
+
+        return userRepository.findAllByEmailContainingIgnoreCase(partialEmail);
+    }
+
 }
