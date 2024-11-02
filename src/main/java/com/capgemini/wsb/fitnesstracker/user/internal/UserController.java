@@ -148,6 +148,7 @@ class UserController {
                 .collect(Collectors.toList());
     }
 
+
     /**
      * Updates a user with the provided ID using the data from UserDto.
      *
