@@ -22,7 +22,7 @@ interface UserRepository extends JpaRepository<User, Long> {
      */
     default Optional<User> findByEmail(String email) {
         return findAll().stream()
-                        .filter(user -> Objects.equals(user.getEmail(), email))
+                        .filter(user -> Objects.equals(user.getEmail().toLowerCase(), email.toLowerCase()))
                         .findFirst();
     }
 
