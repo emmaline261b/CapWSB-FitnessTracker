@@ -17,5 +17,5 @@ public interface UserService {
     User updateUser(Long id, User user);
 
     User deleteUserById(Long id);
-    List<User> findMatchingUsersByPartialEmail(String partialEmail);
+    List<User> findMatchingUsersByPartialEmail(String partialEmail) throws IllegalArgumentException;
 }
