@@ -3,12 +3,15 @@ package com.capgemini.wsb.fitnesstracker.user.internal;
 import com.capgemini.wsb.fitnesstracker.user.api.User;
 import com.capgemini.wsb.fitnesstracker.user.api.UserDto;
 import com.capgemini.wsb.fitnesstracker.user.api.UserNotFoundException;
+import com.capgemini.wsb.fitnesstracker.user.api.UserSearch;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Collections;
 import java.util.stream.Collectors;
@@ -19,7 +22,6 @@ import java.util.stream.Collectors;
 class UserController {
 
     private final UserServiceImpl userService;
-
     private final UserMapper userMapper;
 
     @GetMapping
@@ -61,7 +63,7 @@ class UserController {
                 .orElse(Collections.emptyList());
     }
 
-    @DeleteMapping(value = "{id}")
+    @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public User deleteUser(@PathVariable Long id) {
         return userService.deleteUserById(id);
@@ -73,5 +75,25 @@ class UserController {
                 .stream()
                 .map(userMapper::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @GetMapping("/older/{date}")
+    public List<UserDto> getUsersOlderThan(@PathVariable("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        return userService.findUsersOlderThan(date)
+                .stream()
+                .map(userMapper::toDto)
+                .collect(Collectors.toList());
+    }
+
+    @PostMapping(value = "/matching-users")
+    public List<UserDto> findMatchingUser(@RequestBody UserSearch userSearch) {
+        return userService.findMatchingUsers(userSearch)
+                .stream().map(userMapper::toDtoJustEmailAndId)
+                .collect(Collectors.toList());
+    }
+
+    @PutMapping(value = "/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
+        return userService.updateUser(id, userMapper.toEntity(userDto));
     }
 }
