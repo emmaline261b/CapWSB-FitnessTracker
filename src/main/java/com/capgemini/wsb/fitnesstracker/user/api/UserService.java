@@ -14,10 +14,9 @@ public interface UserService {
     Optional<User> getUserDetailsById(Long id);
     Optional<User> getUserDetailsByEmail(String email);
     List<User> findMatchingUsers(UserSearch search);
-    List<User> findMatchingUsersByPartialEmail(String partialEmail);
     List<User> findUsersOlderThan(LocalDate date);
     User updateUser(Long id, User user);
 
     User deleteUserById(Long id);
-
+    List<User> findMatchingUsersByPartialEmail(String partialEmail);
 }
